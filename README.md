@@ -1,133 +1,133 @@
-🐉 Pokémon Battle – Projeto de Estudo de POO em Python
+🎮 Pokémon em Python com Tkinter
 
-Interface gráfica em Tkinter + lógica de batalha + herança entre classes
+Projeto desenvolvido para estudar Programação Orientada a Objetos (POO) utilizando Python e Tkinter — com foco em herança, polimorfismo, organização modular e um sistema simples de exploração + batalhas por turnos.
 
-<p align="center"> <img src="https://raw.githubusercontent.com/placeholder/Pokemon/thumb1.png" width="450"> </p>
-🎯 Sobre o Projeto
+🔗 Repositório:
+https://github.com/Gabrielpalhanogomes2803/Pok-mon-em-Python-com-Tkinter.git
 
-Este projeto foi criado com o objetivo principal de praticar Programação Orientada a Objetos (POO) em Python, usando um mini-jogo inspirado no universo Pokémon.
+📌 Sobre o Projeto
 
-Aqui você encontrará:
+Este projeto recria um pequeno sistema inspirado em Pokémon para demonstrar, na prática:
 
-✔️ Herança (classe Pai → classes Filhas)
+Herança entre classes
 
-✔️ Polimorfismo (cada tipo de Pokémon ataca de forma diferente)
+Classes pai e subclasses
 
-✔️ Composição (jogador possui pokémons, batalha usa objetos player + inimigo)
+Polimorfismo com métodos sobrescritos
 
-✔️ Tkinter para interface gráfica
+Separação de responsabilidades entre módulos
 
-✔️ Sistema de batalha por turnos
+Estrutura de jogo com player, exploração e batalhas
 
-✔️ Escolha de Pokémon antes da luta
+Interface gráfica com Tkinter
 
-✔️ Level up automático a cada 3 vitórias
+O objetivo não é fazer um jogo completo, mas sim mostrar conceitos de POO funcionando de forma clara e organizada.
 
-O jogo não tenta copiar Pokémon oficial — ele foca em ensinar e demonstrar POO de forma prática e divertida.
+🧱 Estrutura do Projeto
+📦 Pokemon-em-Python-com-Tkinter
+│
+├── main.py               # Início do jogo
+├── gui.py                # Interface Tkinter
+├── batalha.py            # Mecânica da batalha por turnos
+├── Player.py             # Classe do jogador
+├── Pokemon.py            # Classe base dos Pokémons
+├── pokemons_tipos.py     # Subclasses dos tipos (fogo, água, planta)
+├── utils.py              # Funções auxiliares
+└── save_load.py          # Base futura para salvar/carregar progresso
 
-🧠 Objetivo de Aprendizado (POO)
+🎮 Funcionalidades do Jogo
+🧍 Escolha do Pokémon inicial
 
-O projeto foi idealizado para treinar os pilares da POO:
+Antes de começar, o jogador escolhe qual Pokémon deseja usar.
 
-🔹 Herança
-Pokemon (classe base)
-├── PokemonFogo
-├── PokemonAgua
-└── PokemonEletrico
+🌿 Exploração
 
-Pessoa
-├── Player
-└── Inimigo
+O jogador clica no botão Explorar, e um Pokémon inimigo aleatório do mesmo nível aparece para batalhar.
 
-🔹 Polimorfismo
+⚔️ Sistema de Batalha por Turnos
 
-Cada tipo de Pokémon possui seu método atacar() com lógica própria.
+Ataque do jogador
 
-🔹 Encapsulamento
+Ataque do inimigo
 
-Cada classe controla seus próprios atributos como nível, HP e dano.
+HP recarregado no início do duelo
 
-🔹 Composição
+Vence quem zerar o HP adversário primeiro
 
-Players possuem lista de Pokémons, inimigos são gerados dinamicamente por nível.
+📈 Sistema de Nível
 
-📂 Estrutura do Projeto
-📦 PokemonBattle/
- ┣ 📜 main.py
- ┣ 📜 gui.py
- ┣ 📜 pessoa.py
- ┣ 📜 pokemons.py
- ┣ 📜 batalha.py
- ┣ 📜 save_load.py
- ┣ 📁 assets/        (imagens opcionais)
- ┗ 📜 README.md
+O player ganha nível a cada vitória
 
-🚀 Como Rodar
-1️⃣ Clonar o repositório
-git clone https://github.com/SEU_USUARIO/PokemonBattle.git
-cd PokemonBattle
+O Pokémon usado ganha nível a cada 3 vitórias
 
-2️⃣ Criar ambiente virtual (opcional)
-python3 -m venv .venv
-source .venv/bin/activate
+O Pokémon inimigo sempre tem o mesmo nível do jogador
 
-3️⃣ Instalar dependências
+🪟 Interface gráfica com Tkinter
 
-Tkinter já vem no Python padrão.
+Simples e funcional, com:
 
-4️⃣ Executar o jogo
+Tela de escolha de Pokémon
+
+Menu principal
+
+Tela de exploração
+
+Tela de batalha com resumo dos ataques
+
+🧠 Objetivo Educacional (POO)
+
+O projeto foca intensamente em:
+
+✔️ Herança
+class PokemonDeFogo(Pokemon):
+    ...
+
+✔️ Polimorfismo
+
+Cada tipo tem ataque diferente.
+
+✔️ Estados e atributos independentes
+
+HP, nível, força, vitórias, etc.
+
+✔️ Modularização
+
+Arquivos separados e organizados.
+
+✔️ Interação entre objetos
+
+Player → Pokémon → Batalha
+
+▶️ Como Executar
+1. Clone o repositório
+git clone https://github.com/Gabrielpalhanogomes2803/Pok-mon-em-Python-com-Tkinter.git
+
+2. Entre no diretório
+cd Pok-mon-em-Python-com-Tkinter
+
+3. Execute o jogo
 python3 main.py
 
-🎮 Como Jogar
-🧍‍♂️ No menu você pode:
-
-Explorar — encontra um inimigo do mesmo nível
-
-Ver Pokémons capturados
-
-Salvar jogo
-
-Sair
-
-⚔️ Na batalha:
-
-Escolha qual Pokémon quer usar
-
-Ataque turno a turno
-
-20% de chance de Golpe Especial
-
-Barras de HP atualizam a cada golpe
-
-Se vencer 3 batalhas → seu player sobe de nível
-
-Seu Pokémon usado também sobe de nível a cada 3 vitórias
-
-📈 Roadmap (futuras melhorias)
-
- Animações de ataque
-
- Sons (com pygame)
-
- Tela de escolha inicial mais bonita
-
- Sistema de tipos mais completo (fogo > planta, água > fogo etc.)
-
- Sprites reais dos Pokémon
-
- Inventário (poções, cura, escudo)
-
-👨‍💻 Tecnologias Utilizadas
+🛠️ Tecnologias Utilizadas
 
 Python 3
 
-Tkinter (GUI)
+Tkinter (interface gráfica)
 
-Programação Orientada a Objetos
+Estruturas de POO
 
-Estrutura modular de classes
+Sistema modular em múltiplos arquivos
 
-🙋‍♂️ Autor
+🚀 Futuras Melhorias
 
-Gabriel Palhano Gomes
-Desenvolvedor em formação, com foco em Python, segurança, automação e boas práticas de código.
+Sistema de captura
+
+Vantagens de tipos (fogo > planta > água > fogo)
+
+Tela inicial com menu animado
+
+Sons e pequenas animações
+
+Salvar e carregar progresso (save file)
+
+Tela de status do Pokémon
