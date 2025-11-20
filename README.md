@@ -51,16 +51,6 @@ Cada classe controla seus próprios atributos como nível, HP e dano.
 
 Players possuem lista de Pokémons, inimigos são gerados dinamicamente por nível.
 
-🖼️ Screenshots
-
-❗ Substitua os links pelas imagens do seu repositório depois.
-
-🎮 Menu Principal
-<p align="center"> <img src="https://raw.githubusercontent.com/placeholder/Pokemon/menu.png" width="450"> </p>
-⚔️ Seleção de Pokémon
-<p align="center"> <img src="https://raw.githubusercontent.com/placeholder/Pokemon/select.png" width="450"> </p>
-🩸 Batalha com barras de vida
-<p align="center"> <img src="https://raw.githubusercontent.com/placeholder/Pokemon/battle.png" width="450"> </p>
 📂 Estrutura do Projeto
 📦 PokemonBattle/
  ┣ 📜 main.py
